@@ -43,8 +43,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statements\ChildrensMovie.cs" />
     <Compile Include="Statements\Customer.cs" />
     <Compile Include="Statements\Movie.cs" />
+    <Compile Include="Statements\NewReleaseMovie.cs" />
+    <Compile Include="Statements\RegularMovie.cs" />
     <Compile Include="Statements\Rental.cs" />
     <Compile Include="Statements\StatementCreator.cs" />
   </ItemGroup>

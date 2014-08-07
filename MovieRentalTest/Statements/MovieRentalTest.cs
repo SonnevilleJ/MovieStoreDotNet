@@ -10,10 +10,10 @@ namespace MovieRentalTest.Statements
         public void ShouldProduceAStatement()
         {
             var customer = new Customer("Bob");
-            customer.AddRental(new Rental(new Movie("Pulp Fiction", Movie.REGULAR), 2));
-            customer.AddRental(new Rental(new Movie("Lilo & Stitch", Movie.CHILDRENS), 3));
-            customer.AddRental(new Rental(new Movie("Gladiator", Movie.REGULAR), 6));
-            customer.AddRental(new Rental(new Movie("Magic Mike", Movie.NEW_RELEASE), 4));
+            customer.AddRental(new Rental(new RegularMovie("Pulp Fiction"), 2));
+            customer.AddRental(new Rental(new ChildrensMovie("Lilo & Stitch"), 3));
+            customer.AddRental(new Rental(new RegularMovie("Gladiator"), 6));
+            customer.AddRental(new Rental(new NewReleaseMovie("Magic Mike"), 4));
 
             var statementCreator = new StatementCreator();
             var bobsStatement = statementCreator.CreateStatement(customer);
