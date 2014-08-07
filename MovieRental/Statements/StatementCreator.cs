@@ -14,10 +14,10 @@
 
                 frequentRenterPoints++;
 
-                if (rental.Movie.PriceCode == Movie.NEW_RELEASE && rental.DaysRented > 1)
-                    frequentRenterPoints++;
+                var movie = rental.Movie;
+                frequentRenterPoints += movie.CalculateExtraFrequentRenterPoints(rental.DaysRented);
 
-                result += "\t" + rental.Movie.Title + "\t" + thisAmount.ToString() + "\n";
+                result += "\t" + movie.Title + "\t" + thisAmount.ToString() + "\n";
                 totalAmount += thisAmount;
             }
 
@@ -26,6 +26,5 @@
 
             return result;
         }
-
     }
 }

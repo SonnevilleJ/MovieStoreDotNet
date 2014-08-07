@@ -3,7 +3,7 @@
     public class RegularMovie : Movie
     {
         public RegularMovie(string title)
-            : base(title, REGULAR)
+            : base(title)
         {
         }
 

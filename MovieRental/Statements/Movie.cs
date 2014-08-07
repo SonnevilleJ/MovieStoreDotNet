@@ -2,17 +2,10 @@
 {
     public abstract class Movie
     {
-        public Movie(string title, int priceCode)
+        public Movie(string title)
         {
             Title = title;
-            PriceCode = priceCode;
         }
-
-        public const int REGULAR = 1;
-        public const int NEW_RELEASE = 2;
-        public const int CHILDRENS = 3;
-
-        public int PriceCode { get; set; }
 
         public string Title { get; set; }
 
@@ -24,6 +17,11 @@
             if (daysRented > dayAllotment)
                 price += (daysRented - dayAllotment) * 1.5;
             return price;
+        }
+
+        public virtual int CalculateExtraFrequentRenterPoints(double daysRented)
+        {
+            return 0;
         }
     }
 }

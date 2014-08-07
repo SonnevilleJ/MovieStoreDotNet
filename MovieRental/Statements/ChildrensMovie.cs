@@ -3,7 +3,7 @@
     public class ChildrensMovie : Movie
     {
         public ChildrensMovie(string title)
-            : base(title, CHILDRENS)
+            : base(title)
         {
         }
 
