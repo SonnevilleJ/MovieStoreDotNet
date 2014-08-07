@@ -4,33 +4,28 @@ namespace MovieRental.Statements
 {
     public class Customer
     {
-        private List<Rental> _rentals = new List<Rental>();
-
         public Customer(string name)
         {
-            this.name = name;
+            Rentals = new List<Rental>();
+            this.Name = name;
         }
 
-        public string name { get; set; }
+        public string Name { get; set; }
         
-        public List<Rental> rentals
-        {
-            get { return _rentals; }
-            set { _rentals = value; }
-        }
+        public List<Rental> Rentals { get; set; }
 
         public void AddRental(Rental rental)
         {
-            rentals.Add(rental);
+            Rentals.Add(rental);
         }
 
         public string Statement()
         {
             double totalAmount = 0.0;
             int frequentRenterPoints = 0;
-            string result = "Rental Record for " + name + "\n";
+            string result = "Rental Record for " + Name + "\n";
 
-            foreach (var rental in rentals)
+            foreach (var rental in Rentals)
             {
                 double thisAmount = 0;
 
