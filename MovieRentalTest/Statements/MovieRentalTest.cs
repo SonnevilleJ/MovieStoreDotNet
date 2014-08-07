@@ -15,7 +15,8 @@ namespace MovieRentalTest.Statements
             customer.AddRental(new Rental(new Movie("Gladiator", Movie.REGULAR), 6));
             customer.AddRental(new Rental(new Movie("Magic Mike", Movie.NEW_RELEASE), 4));
 
-            var bobsStatement = customer.Statement();
+            var statementCreator = new StatementCreator();
+            var bobsStatement = statementCreator.CreateStatement(customer);
 
             const string expectedStatement = "Rental Record for Bob\n" +
                                              "\tPulp Fiction\t2\n" +

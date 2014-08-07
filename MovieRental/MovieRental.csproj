@@ -46,6 +46,7 @@
     <Compile Include="Statements\Customer.cs" />
     <Compile Include="Statements\Movie.cs" />
     <Compile Include="Statements\Rental.cs" />
+    <Compile Include="Statements\StatementCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
